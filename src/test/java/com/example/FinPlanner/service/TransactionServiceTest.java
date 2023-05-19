@@ -35,13 +35,11 @@ public class TransactionServiceTest {
         Transaction transaction = new Transaction();
         transaction.setDescription("TEST1");
         transaction.setAmount(500.0);
-        transaction.setCurrentBalance(200.0);
         transaction.setTransactionType(Transaction.TransactionType.SPENDING);
         transactionService.save(transaction);
         Transaction transaction2 = new Transaction();
         transaction2.setDescription("TEST2");
         transaction2.setAmount(200.0);
-        transaction2.setCurrentBalance(200.0);
         transaction2.setTransactionType(Transaction.TransactionType.SPENDING);
         transactionService.save(transaction2);
         List<Transaction> results = transactionService.findAllSortByDate();
@@ -61,14 +59,12 @@ public class TransactionServiceTest {
         Transaction transaction1 = new Transaction();
         transaction1.setDescription("TEST1");
         transaction1.setAmount(500.0);
-        transaction1.setCurrentBalance(600.0);
         transaction1.setTransactionCard(card);
         transaction1.setTransactionType(Transaction.TransactionType.SPENDING);
 
         Transaction transaction2 = new Transaction();
         transaction2.setDescription("TEST2");
         transaction2.setAmount(300.0);
-        transaction2.setCurrentBalance(900.0);
         transaction2.setTransactionCard(card);
         transaction2.setTransactionType(Transaction.TransactionType.SPENDING);
 
