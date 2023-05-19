@@ -37,6 +37,10 @@ public class TransactionService implements ServiceInterface<Transaction>,SortInt
         transactionRepository.save(transaction);
     }
 
+    public List<Transaction> getTransactionsByType(Transaction.TransactionType type){
+        return transactionRepository.getTransactionByTransactionType(type);
+    }
+
     public Transaction findById(Long id){
         return transactionRepository.findById(id).orElseThrow(EntityNotFoundException::new);
     }

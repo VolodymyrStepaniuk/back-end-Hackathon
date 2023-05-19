@@ -17,4 +17,5 @@ public interface TransactionRepository extends JpaRepository<Transaction, Long >
 
     @Query("SELECT SUM(t.amount) FROM Transaction t WHERE MONTH(t.transactionTime) = MONTH(CURRENT_DATE) AND YEAR(t.transactionTime) = YEAR(CURRENT_DATE) AND t.transactionType = :type")
     Double getTransactionsForCurrentMonthByType(@Param("type") Transaction.TransactionType type);
+    List<Transaction> getTransactionByTransactionType(Transaction.TransactionType type);
 }

@@ -1,5 +1,6 @@
 package com.example.FinPlanner.controllers;
 
+import com.example.FinPlanner.model.Operation;
 import com.example.FinPlanner.model.Transaction;
 import com.example.FinPlanner.service.CardService;
 import com.example.FinPlanner.service.TransactionService;
@@ -52,6 +53,11 @@ public class TransactionController {
     @GetMapping("/{transaction_type}")
     public ResponseEntity<Double> getAmountForCurrMonth(@PathVariable("transaction_type")Transaction.TransactionType type){
         return ResponseEntity.ok().body(transactionService.getAmountFromCurrentMonth(type));
+    }
+
+    @GetMapping("/{transaction_type}/all")
+    public List<Transaction> getOperationsByType(@PathVariable("operations_type") Transaction.TransactionType transactionType){
+        return transactionService.getTransactionsByType(transactionType);
     }
 
     @DeleteMapping("/{transaction_id}")
