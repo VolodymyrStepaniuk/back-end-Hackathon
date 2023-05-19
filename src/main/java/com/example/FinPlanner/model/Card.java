@@ -30,6 +30,8 @@ public class Card {
 
     @Column(name = "current_balance")
     private double currentBalance;
+    @Column(name = "expiry_date")
+    private String expiryDate;
 
     @OneToMany(mappedBy = "transactionCard", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Transaction> cardTransactions;
