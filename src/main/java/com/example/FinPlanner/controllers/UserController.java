@@ -3,6 +3,7 @@ package com.example.FinPlanner.controllers;
 import com.example.FinPlanner.model.User;
 import com.example.FinPlanner.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("api")
@@ -33,8 +34,8 @@ public class UserController {
     }
     //The method will not be used in this case
     @GetMapping(value = "/balance")
-    public Double getTotalBalance(){
-        return userService.getAll().iterator().next().getTotalIncome();
+    public ResponseEntity<Double> getTotalBalance(){
+        return ResponseEntity.ok().body(userService.getAll().iterator().next().getTotalIncome());
     }
 
     @PutMapping(value = "/users/{userId}/{changingType}")
