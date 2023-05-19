@@ -15,7 +15,6 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedOrigins("http://localhost:3000")
-                        .allowedOrigins("https://maxxlab.github.io")// Replace with your React application's domain
                         .allowedMethods("*") // Allow all HTTP methods
                         .allowedHeaders("*") // Allow all headers
                         .allowCredentials(true); // Allow sending of cookies
