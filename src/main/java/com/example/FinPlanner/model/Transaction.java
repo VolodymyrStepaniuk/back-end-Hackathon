@@ -28,8 +28,8 @@ public class Transaction {
 
     private Double amount;
 
-    @Column(name = "card_balance")
-    private Double currentBalance;
+    @Column(name = "transaction_currency")
+    private String currency;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "transaction_type")
