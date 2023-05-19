@@ -1,6 +1,6 @@
 <h2>Java Spring Backend with REST API</h2>
 
-<h3>This GitHub repository hosts the backend implementation of an application, developed using the Java Spring framework and exposing a RESTful API for communication with the frontend. This application has been developed as our part of BEST(Board of European Students of Technology) HACKATHON 2023.</h3>
+<h3>This GitHub repository hosts the backend implementation of an application, developed using the Java Spring framework and exposing a RESTful API for communication with the frontend. This application has been developed as our part of BEST(Board of European Students of Technology) HACKATHON 2023</h3>
 
 <h4>The site for which the backend is being developed: <a href="https://github.com/maxxlab/maxxlab.github.io">Our Project</a> 
 FinHelper is a financial planner application developed for a hackathon. It leverages PostgreSQL, a powerful open-source relational database management system (RDBMS), to store and manage financial data for users, cards, operations, transactions, and more.
