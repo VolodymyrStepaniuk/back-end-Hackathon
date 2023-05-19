@@ -9,7 +9,7 @@ FinHelper is a financial planner application developed for a hackathon. It lever
 <h3>The technology stack that was applied:</h3>
 <ul>
     <li>Java: The primary programming language used for backend development.</li>
-    <li>Spring Framework: Utilizing the Spring ecosystem, including Spring Boot, Spring Data JPA, and Spring Security.</li>
+    <li>Spring Framework: Utilizing the Spring ecosystem, including Spring Boot and Spring Data JPA.</li>
     <li>REST API: Building a RESTful API for communication with the frontend and other services.</li>
     <li>PostgreSQL: Storing and managing financial data using the PostgreSQL database.</li>
     <li>Maven: Managing project dependencies and build process.</li>
