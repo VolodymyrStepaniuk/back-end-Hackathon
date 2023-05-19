@@ -56,7 +56,7 @@ public class TransactionController {
     }
 
     @GetMapping("/{transaction_type}/all")
-    public List<Transaction> getOperationsByType(@PathVariable("operations_type") Transaction.TransactionType transactionType){
+    public List<Transaction> getTransactionsByType(@PathVariable("transaction_type") Transaction.TransactionType transactionType){
         return transactionService.getTransactionsByType(transactionType);
     }
 
