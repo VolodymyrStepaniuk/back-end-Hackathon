@@ -4,6 +4,7 @@ import com.example.FinPlanner.model.Transaction;
 import com.example.FinPlanner.service.CardService;
 import com.example.FinPlanner.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -49,8 +50,8 @@ public class TransactionController {
         return transactionService.findById(id);
     }
     @GetMapping("/{transaction_type}")
-    public Double getAmountForCurrMonth(@PathVariable("transaction_type")Transaction.TransactionType type){
-        return transactionService.getAmountFromCurrentMonth(type);
+    public ResponseEntity<Double> getAmountForCurrMonth(@PathVariable("transaction_type")Transaction.TransactionType type){
+        return ResponseEntity.ok().body(transactionService.getAmountFromCurrentMonth(type));
     }
 
     @DeleteMapping("/{transaction_id}")
