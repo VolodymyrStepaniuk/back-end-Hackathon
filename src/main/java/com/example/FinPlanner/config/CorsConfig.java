@@ -14,9 +14,10 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("https://back-end-hack.up.railway.app") // Specify the allowed origin domains
-                        .allowedMethods("GET", "POST", "PUT", "DELETE") // Specify the allowed HTTP methods
-                        .allowedHeaders("*"); // Specify the allowed headers
+                        .allowedOrigins("http://localhost:3000") // Replace with your React application's domain
+                        .allowedMethods("*") // Allow all HTTP methods
+                        .allowedHeaders("*") // Allow all headers
+                        .allowCredentials(true); // Allow sending of cookies
             }
         };
     }
